@@ -1,0 +1,22 @@
+{
+  "name": "instagram-back",
+  "version": "1.0.0",
+  "description": "This is the comment microservice of an instagram clone application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "npm run build && node dist/index.js"
+  },
+  "author": "Rishabh Anand<ranand16@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cuid": "^2.1.6",
+    "mongodb": "^3.3.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "rimraf": "^3.0.0"
+  }
+}
