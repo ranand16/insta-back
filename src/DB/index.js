@@ -13,5 +13,5 @@ export async function makeDb () {
     return client.db(dbName)
 }
 
-const commentsDB = makeCommentsDB({ makeDB })
+const commentsDB = makeCommentsDB({ makeDb })
 export default commentsDB

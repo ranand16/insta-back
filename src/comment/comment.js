@@ -31,6 +31,7 @@ export default function buildComment({ Id, makeSource }){
         }
         const validSource = makeSource(source);
         const deletedComment = ".xX This comment is deleted Xx."
+        console.log(text)
         return Object.freeze({
             getAuthor: ()=>{author, userId},
             getId: ()=>id,
