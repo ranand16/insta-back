@@ -9,14 +9,12 @@ module.exports = function makeCallback(controller){
             path: req.path,
             headers: {
                 "Content-Type": req.get("Content-Type"),
-                Referer: req.get(),
+                "Referer": req.get("Referer"),
                 "User-Agent": req.get("User-Agent")
             }
         }
-        console.log(httpRequest);
         controller(httpRequest)
         .then((httpResponse)=>{
-            console.log(httpResponse);
             if (httpResponse.headers) {
                 res.set(httpResponse.headers)
             }

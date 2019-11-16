@@ -1,7 +1,11 @@
 import commentsDB from '../DB'
 import makeAddComment from "./add-comment"
 
-const addComment = makeAddComment({ commentsDB })
+// console.log("----------------------------------------------------------------------------------------");
+// console.log(commentsDB)
+// console.log("----------------------------------------------------------------------------------------");
+
+const addComment = makeAddComment(commentsDB)
 const commentService = Object.freeze({
     addComment
 })
